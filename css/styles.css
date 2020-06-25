@@ -101,6 +101,9 @@ header > div {
   align-items: center;
   justify-content: center;
   height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
 }
 h1 {
   color: var(--white-color);
@@ -406,7 +409,6 @@ footer {
 }
 .portfolio-list li {
   width: calc((100% - 60px) / 3);
-  border-radius: 4px;
   border: 1px solid #eeeeee;
   margin-bottom: 30px;
 }
@@ -431,10 +433,15 @@ footer {
   font-size: 18px;
   line-height: 28px;
   height: 294px;
-  width: 370px;
+  width: 368px;
   position: absolute;
   padding: 63px 24px;
   margin-bottom: 110px;
+}
+.portfolio-listitem:hover,
+.portfolio-listitem:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .portfolio-listitem > a:hover,
 .portfolio-listitem > a:focus {
