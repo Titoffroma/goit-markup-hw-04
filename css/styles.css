@@ -95,7 +95,7 @@ header > div {
 }
 .mainimage {
   background: linear-gradient(var(--overlay-color), var(--overlay-color)),
-    url(/img/Header-img-condensed.jpg) no-repeat center;
+    url(./img/Header-img-condensed.jpg) no-repeat center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,13 +184,13 @@ section h2 {
   height: 294px;
 }
 .what-we-do-list-item:nth-child(1) {
-  background: url(/img/img1.jpg) no-repeat;
+  background: url(./img/img1.jpg) no-repeat;
 }
 .what-we-do-list-item:nth-child(2) {
-  background: url(/img/img2.jpg) no-repeat;
+  background: url(./img/img2.jpg) no-repeat;
 }
 .what-we-do-list-item:nth-child(3) {
-  background: url(/img/img3.jpg) no-repeat;
+  background: url(./img/img3.jpg) no-repeat;
 }
 .what-we-do-list-item:not(:last-child) {
   margin-right: 30px;
