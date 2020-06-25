@@ -5,7 +5,8 @@
   --white-color: #ffffff;
   --text-color: #757575;
   --title-color: #212121;
-  --overlay-color: rgba(47, 48, 58, 0.8)
+  --social-icon-color: #afb1b8;
+  --overlay-color: rgba(47, 48, 58, 0.8);
 }
 * {
   padding: 0px;
@@ -75,7 +76,6 @@ header > div {
   color: var(--main-color);
   --text-color: var(--main-color);
 }
-}
 .header-contacts-list a:hover .header-contacts-list a:focus {
   color: var(--main-color);
 }
@@ -94,10 +94,12 @@ header > div {
   padding: 94px 0px 94px;
 }
 .mainimage {
-  background: linear-gradient(var(--overlay-color), var(--overlay-color)), url()
+  background: linear-gradient(var(--overlay-color), var(--overlay-color)),
+    url(/img/Header-img-condensed.jpg) no-repeat center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 600px;
 }
 h1 {
@@ -106,7 +108,6 @@ h1 {
   font-weight: 700;
   font-size: 44px;
   text-transform: uppercase;
-  margin-top: 200px;
   margin-bottom: 30px;
   width: 650px;
   text-align: center;
@@ -176,28 +177,36 @@ section h2 {
 .what-we-do-list {
   display: flex;
 }
-.what-we-do-list h3 {
+.what-we-do-list-item {
+  width: calc((100% - 30px * 2) / 3);
+  display: flex;
+  align-items: flex-end;
+  height: 294px;
+}
+.what-we-do-list-item:nth-child(1) {
+  background: url(/img/img1.jpg) no-repeat;
+}
+.what-we-do-list-item:nth-child(2) {
+  background: url(/img/img2.jpg) no-repeat;
+}
+.what-we-do-list-item:nth-child(3) {
+  background: url(/img/img3.jpg) no-repeat;
+}
+.what-we-do-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.what-we-do-list-header {
   color: var(--white-color);
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
-}
-.what-we-do-list-item {
-  width: calc((100% - 30px * 2) / 3);
-}
-.what-we-do-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-.what-we-do-list-item img {
-  width: 100%;
-}
-.what-we-do-listitem {
   position: relative;
   margin-top: -70px;
   text-align: center;
   line-height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
+  background-color: var(--overlay-color);
+  flex-basis: 100%;
 }
 .our-team-section {
   background-color: #f5f4fa;
@@ -217,6 +226,9 @@ section h2 {
 .our-team-list-item {
   width: calc((100% - 30px * 3) / 4);
   background-color: var(--white-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 .our-team-list-item:not(:last-child) {
   margin-right: 30px;
@@ -244,6 +256,19 @@ section h2 {
   justify-content: space-between;
   padding: 16px 32px 24px;
 }
+.our-team-list-item-social > li {
+  border-radius: 50%;
+}
+.our-team-list-item-social > li:hover,
+.our-team-list-item-social > li:focus {
+  background: var(--main-color);
+  --social-icon-color: var(--white-color);
+}
+.our-team-social-icon,
+.footer-icon {
+  height: 44px;
+  width: 44px;
+}
 .our-clients h2 {
   padding-top: 94px;
   margin-top: 0px;
@@ -261,12 +286,17 @@ section h2 {
 .our-clients-listitem {
   width: calc((100% - 30px * 5) / 6);
 }
-.our-clients-listitem img {
-  width: 100%;
+.our-clients-listitem a:hover,
+.our-clients-listitem a:focus {
+  --social-icon-color: var(--main-color);
+}
+.our-clients-icon {
+  width: 170px;
+  height: 90px;
 }
 footer {
   background-color: #2f303a;
-  padding: 45px 0px 21px;
+  padding: 45px 0px 60px;
 }
 .footer-list,
 .footer-social {
@@ -277,6 +307,18 @@ footer {
 }
 .footer-social {
   margin-top: 20px;
+}
+.footer-social > li {
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  --social-icon-color: var(--white-color);
+}
+.footer-social > li:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-social > li:hover,
+.footer-social > li:focus {
+  background: var(--main-color);
 }
 .footer-list > div:not(:last-child) {
   width: calc((100% - 60px) / 4);
@@ -318,18 +360,6 @@ footer {
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
-}
-.footer-bottom {
-  color: rgba(255, 255, 255, 0.4);
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  box-sizing: border-box;
-  margin: 28px 0px 0px;
-  line-height: 24px;
-  padding-top: 18px;
 }
 .invisible {
   display: none;
