@@ -71,13 +71,18 @@ header > div {
   font-size: 14px;
   font-style: normal;
 }
+.header-adress-icon {
+  width: 16px;
+  height: 12px;
+  fill: var(--text-color);
+}
 .header-contacts-list a:hover,
 .header-contacts-list a:focus {
   color: var(--main-color);
-  --text-color: var(--main-color);
 }
-.header-contacts-list a:hover .header-contacts-list a:focus {
-  color: var(--main-color);
+.header-contacts-list a:hover .header-adress-icon,
+.header-contacts-list a:focus .header-adress-icon {
+  fill: var(--main-color);
 }
 .header-contacts-list li:not(:first-child) {
   margin-left: 30px;
@@ -259,19 +264,18 @@ section h2 {
   justify-content: space-between;
   padding: 16px 32px 24px;
 }
-.our-team-list-item-social > li {
-  border-radius: 50%;
-  transition: 2s;
-}
-.our-team-list-item-social > li:hover,
-.our-team-list-item-social > li:focus {
+.our-team-social-icon:hover,
+.our-team-social-icon:focus {
+  fill: var(--white-color);
   background: var(--main-color);
-  --social-icon-color: var(--white-color);
 }
 .our-team-social-icon,
 .footer-icon {
   height: 44px;
   width: 44px;
+  fill: var(--social-icon-color);
+  border-radius: 50%;
+  transition: 2s;
 }
 .social {
   display: block;
@@ -294,13 +298,17 @@ section h2 {
 .our-clients-listitem {
   width: calc((100% - 30px * 5) / 6);
 }
-.our-clients-listitem a:hover,
-.our-clients-listitem a:focus {
-  --social-icon-color: var(--main-color);
+.our-clients-icon:hover,
+.our-clients-icon:focus {
+  fill: var(--main-color);
+  border-color: var(--main-color);
 }
 .our-clients-icon {
   width: 170px;
   height: 90px;
+  fill: var(--social-icon-color);
+  border: 1px solid var(--social-icon-color);
+  border-radius: 4px;
 }
 footer {
   background-color: #2f303a;
@@ -316,16 +324,15 @@ footer {
 .footer-social {
   margin-top: 20px;
 }
-.footer-social > li {
-  border-radius: 50%;
+.footer-icon {
   background: rgba(255, 255, 255, 0.1);
-  --social-icon-color: var(--white-color);
+  fill: var(--white-color);
 }
 .footer-social > li:not(:last-child) {
   margin-right: 10px;
 }
-.footer-social > li:hover,
-.footer-social > li:focus {
+.footer-icon:hover,
+.footer-icon:focus {
   background: var(--main-color);
 }
 .footer-list > div:not(:last-child) {
@@ -370,7 +377,14 @@ footer {
   text-transform: uppercase;
 }
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .secondari-nav {
   padding: 0px 400px 50px;
