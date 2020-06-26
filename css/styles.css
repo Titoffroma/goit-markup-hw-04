@@ -261,6 +261,7 @@ section h2 {
 }
 .our-team-list-item-social > li {
   border-radius: 50%;
+  transition: 2s;
 }
 .our-team-list-item-social > li:hover,
 .our-team-list-item-social > li:focus {
