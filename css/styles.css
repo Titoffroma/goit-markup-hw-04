@@ -66,6 +66,7 @@ header > div {
 }
 .header-contacts-list a {
   color: var(--text-color);
+  fill: var(--text-color);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -74,14 +75,10 @@ header > div {
 .header-adress-icon {
   width: 16px;
   height: 12px;
-  fill: var(--text-color);
 }
 .header-contacts-list a:hover,
 .header-contacts-list a:focus {
   color: var(--main-color);
-}
-.header-contacts-list a:hover .header-adress-icon,
-.header-contacts-list a:focus .header-adress-icon {
   fill: var(--main-color);
 }
 .header-contacts-list li:not(:first-child) {
@@ -264,8 +261,8 @@ section h2 {
   justify-content: space-between;
   padding: 16px 32px 24px;
 }
-.our-team-social-icon:hover,
-.our-team-social-icon:focus {
+.social:hover,
+.social:focus {
   fill: var(--white-color);
   background: var(--main-color);
 }
@@ -273,13 +270,13 @@ section h2 {
 .footer-icon {
   height: 44px;
   width: 44px;
-  fill: var(--social-icon-color);
-  border-radius: 50%;
-  transition: 2s;
 }
 .social {
   display: block;
   height: 44px;
+  fill: var(--social-icon-color);
+  border-radius: 50%;
+  transition: 2s;
 }
 .our-clients h2 {
   padding-top: 94px;
@@ -324,16 +321,12 @@ footer {
 .footer-social {
   margin-top: 20px;
 }
-.footer-icon {
+.footer-social a {
   background: rgba(255, 255, 255, 0.1);
   fill: var(--white-color);
 }
 .footer-social > li:not(:last-child) {
   margin-right: 10px;
-}
-.footer-icon:hover,
-.footer-icon:focus {
-  background: var(--main-color);
 }
 .footer-list > div:not(:last-child) {
   width: calc((100% - 60px) / 4);
@@ -393,25 +386,23 @@ footer {
   display: flex;
   justify-content: center;
 }
-.secondary-nav-listitem {
-  height: 38px;
-  background-color: #f5f4fa;
-  border-radius: 4px;
-  padding: 0px 22px 0px;
-  color: var(--title-color);
-}
 .secondary-nav-listitem:not(:last-child) {
   margin-right: 8px;
 }
 .secondary-nav-listitem a {
-  color: inherit;
+  display: inline-block;
+  padding: 0px 22px 0px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 38px;
+  color: var(--title-color);
+  height: 38px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
 }
-.secondary-nav-listitem:hover,
-.secondary-nav-listitem:focus {
+.secondary-nav-listitem a:hover,
+.secondary-nav-listitem a:focus {
   background-color: var(--main-color);
   color: var(--white-color);
 }
